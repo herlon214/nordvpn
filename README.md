@@ -31,7 +31,7 @@ func main() {
 |Function|Args example|Description|
 |--------|----|-----------|
 |FilterOnline(),|-|Filter online servers|
-|FilterByTechnology(technologies ...string)|"proxy","ikev2"|Filter by server's technology, you can specify many.|
+|FilterByTechnology(technologies ...string)|"proxy","ikev2"|Filter by server's technology, you can specify many|
 |FilterByCountry(code string)|"BR"|Filter by country code|
 |SortByLoadAsc()|-|Sort servers by load in ascending order|
 |SortByLoadDesc|-|Sort servers by load in descending order|
