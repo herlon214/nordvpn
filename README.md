@@ -5,8 +5,6 @@ $ go get github.com/herlon214/nordvpn
 ```
 
 #### Usage
-You can use the server list returned by `FetchData()` but it's also
-available many operators to filter, sort the servers. You can even pipe them if needed. 
 ```go
 package main
 import (
