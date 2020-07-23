@@ -8,9 +8,9 @@ import (
 
 type Operator = func(servers []Server) []Server
 
-func PipeFilters(filters ...Operator) Operator {
+func PipeOperators(operators ...Operator) Operator {
 	return func(servers []Server) []Server {
-		for _, filter := range filters {
+		for _, filter := range operators {
 			servers = filter(servers)
 		}
 

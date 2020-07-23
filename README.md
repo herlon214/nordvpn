@@ -10,20 +10,28 @@ available many operators to filter, sort the servers. You can even pipe them if 
 ```go
 package main
 import (
+    "time"
+
     "github.com/herlon214/nordvpn"
+    "github.com/sirupsen/logrus"
 )
 
 func main() {
-    servers, err := nordvpn.FetchData()
-    if err != nil {
-        // do something
-    }
-
-    filteredServers := nordvpn.PipeFilters(
+    maxCacheTime := time.Hour * 1
+    logger := logrus.New()
+    nvpn := nordvpn.New(maxCacheTime, logger)
+    nvpn.SetOperators(
     		nordvpn.FilterOnline(),
     		nordvpn.FilterByCountry("NL"),
     		nordvpn.FilterByTechnology("ikev2"),
-    )(servers)
+    )
+    
+    nvpn.EnableAutoUpdate() // Optional, will auto update the server list when the cache is expired
+    
+    // Fetch the servers
+    servers := nvpn.Get() // []Servers
+    
+    // do something with servers
 }
 ```
 

@@ -56,7 +56,7 @@ func TestPipeFilters(t *testing.T) {
 		},
 	})
 
-	filteredServers := PipeFilters(
+	filteredServers := PipeOperators(
 		FilterOnline(),
 		FilterByCountry("NL"),
 		FilterByTechnology("ikev2"),
