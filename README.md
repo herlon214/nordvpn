@@ -1,8 +1,8 @@
-# NordVPN API
+# NordVPN
 [![codecov](https://codecov.io/gh/herlon214/nordvpn/branch/master/graph/badge.svg)](https://codecov.io/gh/herlon214/nordvpn)
 [![Build Status](https://travis-ci.org/herlon214/nordvpn.svg?branch=master)](https://travis-ci.org/herlon214/nordvpn)
 
-This lib uses the nordvpn servers endpoint to fetch data.
+This lib uses the nordvpn servers endpoint to fetch data in order to make your life easier when using NordVPN servers.
 ```shell script
 $ go get github.com/herlon214/nordvpn
 ```
